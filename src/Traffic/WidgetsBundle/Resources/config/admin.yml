@@ -1,0 +1,55 @@
+services:
+    sonata.admin.secondary_widgets:
+        class: Traffic\WidgetsBundle\Admin\SecondaryWidgetsAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Widgets", label: "Secondary Widgets" }
+        arguments:
+            - ~
+            - Traffic\WidgetsBundle\Entity\SecondaryWidgets
+            - ~
+        calls:
+            - [ setTranslationDomain, [TrafficWidgetsBundle]]
+
+    sonata.admin.primary_widgets:
+        class: Traffic\WidgetsBundle\Admin\PrimaryWidgetsAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Widgets", label: "Primary Widgets" }
+        arguments:
+            - ~
+            - Traffic\WidgetsBundle\Entity\PrimaryWidgets
+            - ~
+        calls:
+            - [ setTranslationDomain, [TrafficWidgetsBundle]]
+
+    sonata.admin.primary_widgets_has_media:
+        class: Traffic\WidgetsBundle\Admin\PrimaryWidgetsHasMediaAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Widgets", label: "Primary Widgets Section Media" , show_in_dashboard: false }
+        arguments:
+            - ~
+            - Traffic\WidgetsBundle\Entity\PrimaryWidgetsHasMedia
+            - ~
+        calls:
+            - [ setTranslationDomain, [TrafficWidgetsBundle]]
+
+    sonata.admin.footer_widgets:
+        class: Traffic\WidgetsBundle\Admin\FooterWidgetsAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Widgets", label: "Footer Widgets" }
+        arguments:
+            - ~
+            - Traffic\WidgetsBundle\Entity\FooterWidgets
+            - ~
+        calls:
+            - [ setTranslationDomain, [TrafficWidgetsBundle]]
+
+    sonata.admin.footer_widgets_has_media:
+        class: Traffic\WidgetsBundle\Admin\FooterWidgetsHasMediaAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Widgets", label: "Footer Widgets Section Media" , show_in_dashboard: false }
+        arguments:
+            - ~
+            - Traffic\WidgetsBundle\Entity\FooterWidgetsHasMedia
+            - ~
+        calls:
+            - [ setTranslationDomain, [TrafficWidgetsBundle]]
