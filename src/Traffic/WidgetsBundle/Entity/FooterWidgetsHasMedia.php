@@ -52,7 +52,7 @@ class FooterWidgetsHasMedia
     /**
      * @var \Traffic\WidgetsBundle\Entity\FooterWidgets
      * @Assert\NotBlank()
-     * @ORM\ManyToOne(targetEntity="Traffic\WidgetsBundle\Entity\FooterWidgets", cascade={"persist","remove"} ,inversedBy="medias", fetch="LAZY" )
+     * @ORM\ManyToOne(targetEntity="Traffic\WidgetsBundle\Entity\FooterWidgets", cascade={"persist","remove"} ,inversedBy="links", fetch="LAZY" )
      * @ORM\JoinColumn(name="footer_widget_id", referencedColumnName="id",nullable=true)
      */
     protected $footerWidget;
