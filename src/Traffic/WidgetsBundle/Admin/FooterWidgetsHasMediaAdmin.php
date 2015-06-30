@@ -62,7 +62,6 @@ class FooterWidgetsHasMediaAdmin extends WidgetsBaseAdmin
     {
         $listMapper
             ->add('media')
-            ->add('gallery')
             ->add('position')
             ->add('enabled')
         ;
