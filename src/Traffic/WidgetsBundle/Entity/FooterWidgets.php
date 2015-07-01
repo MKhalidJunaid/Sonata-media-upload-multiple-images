@@ -224,6 +224,7 @@ class FooterWidgets
     /**
      * @Assert\NotBlank()
      * @ORM\OneToMany(targetEntity="Traffic\WidgetsBundle\Entity\FooterWidgetsHasMedia", mappedBy="footerWidget",cascade={"persist","remove"} )
+     * @ORM\OrderBy({"position" = "ASC"})
      */
     protected $links;
 
